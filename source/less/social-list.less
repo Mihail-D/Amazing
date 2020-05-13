@@ -1,0 +1,64 @@
+.social-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	height: 85px;
+	padding: 0;
+	margin-top: 30px;
+	margin-left: 89px;
+}
+
+.social-list__item {
+	position: relative;
+	margin: 0;
+	height: 14px;
+}
+
+.social-list__item a {
+	margin: 0;
+	padding: 0;
+	width: 73px;
+	border: none;
+	color: #919191;
+	font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.1px;
+}
+
+.social-list__item:hover a {
+	background-color: transparent;
+}
+
+.social-list__item--twitter::before,
+.social-list__item--instagram::before,
+.social-list__item--spotify::before,
+.social-list__item--facebook::before {
+	position: absolute;
+	content: "";
+	top: 5px;
+	left: -30px;
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+}
+
+.social-list__item--facebook::before {
+	left: -28px;
+	background-image: url("../img/facebook-f-brands.svg");
+}
+
+.social-list__item--twitter::before {
+	background-image: url("../img/twitter-brands.svg");
+}
+
+.social-list__item--instagram::before {
+	background-image: url("../img/instagram-brands.svg");
+}
+
+.social-list__item--spotify::before {
+	background-image: url("../img/spotify-brands.svg");
+}

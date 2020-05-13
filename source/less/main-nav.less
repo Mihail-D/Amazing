@@ -1,0 +1,106 @@
+.main-nav {
+	margin-top: 154px;
+	width: 200px;
+
+	position: relative;
+	color: black;
+	text-align: center;
+	height: 40px;
+	font-family: "Arial", Helvetica, sans-serif;
+}
+
+#check-menu {
+	display: none;
+}
+
+label {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	position: relative;
+	top: 3px;
+	left: 160px;
+	width: 37px;
+	height: 52px;
+	cursor: pointer;
+	z-index: 2;
+
+	color: #000;
+	font-family: "Fira Sans", Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.burger-line {
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	width: 26px;
+	height: 4px;
+	background-color: #000;
+	transition: 0.5s all;
+}
+
+.second,
+.third {
+	top: 19px;
+}
+
+.fourth {
+	top: 28px;
+}
+
+.main-menu {
+	display: block;
+	position: absolute;
+	width: 320px;
+	top: 20px;
+	left: 0;
+	transform: translateY(20%);
+	max-height: 0;
+	font-size: 0;
+	overflow: hidden;
+	transition: 0.3s all;
+}
+
+a {
+	display: block;
+	width: 200px;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	background-color: transparent;
+
+	font-family: "Fira Sans", Helvetica, sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	letter-spacing: -0.9px;
+	text-transform: uppercase;
+}
+
+ .main-menu__link:hover {
+	background-color: rgba(144, 210, 226, 0.9);
+}
+
+#check-menu:checked ~ .main-menu {
+	max-height: 500px;
+	font-size: 16px;
+}
+
+#check-menu:checked ~ .first {
+	display: none;
+}
+
+#check-menu:checked ~ .second {
+	transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third {
+	transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth {
+	display: none;
+}
